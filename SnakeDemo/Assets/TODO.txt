@@ -1,6 +1,6 @@
-﻿[>] Yilanin yemek yemesi
-[ ] Yilanin büyümesi
-	[ ] Kuyruk objesinin belli bir konumda spawn edilmesi
+﻿[x] Yilanin yemek yemesi
+[>] Yilanin büyümesi
+	[>] Kuyruk objesinin belli bir konumda spawn edilmesi
 	[ ]	Kuyruk objesinin yilani takip etmesi
 [ ] Skor
 [ ] GameOver

@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a9a555f4a0f3e45b5c5085ac9ecb24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _foodPrefab: {fileID: 3896909242903966158, guid: 51a0c561820d2944a89b1e8901e42609, type: 3}
+  _foodPrefab: {fileID: 3896909242903965744, guid: 51a0c561820d2944a89b1e8901e42609, type: 3}
 --- !u!1 &1341139953
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +575,32 @@ Transform:
   m_Father: {fileID: 920148928}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1509736952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5033044580422270257, guid: fa606d8e50ac0fe449d736740bec291b, type: 3}
+  m_PrefabInstance: {fileID: 5033044580410668452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1509736959
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509736952}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1849900099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -724,7 +750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5033044580422270258, guid: fa606d8e50ac0fe449d736740bec291b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5033044580422270258, guid: fa606d8e50ac0fe449d736740bec291b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -757,22 +783,6 @@ PrefabInstance:
     - target: {fileID: 5033044580422270258, guid: fa606d8e50ac0fe449d736740bec291b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5033044580422270258, guid: fa606d8e50ac0fe449d736740bec291b, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5033044580422270259, guid: fa606d8e50ac0fe449d736740bec291b, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5033044580422270259, guid: fa606d8e50ac0fe449d736740bec291b, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5033044580422270259, guid: fa606d8e50ac0fe449d736740bec291b, type: 3}
-      propertyPath: m_Color.r
-      value: 0.04705882
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa606d8e50ac0fe449d736740bec291b, type: 3}

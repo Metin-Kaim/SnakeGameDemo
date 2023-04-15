@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class SneakGrow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    List<Transform> _snake = new();
+
+    private void Start()
     {
-        
+        _snake.Add(transform); // snake_head added
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
 }
