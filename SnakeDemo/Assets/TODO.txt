@@ -1,4 +1,5 @@
 ﻿[x] Yilanin yemek yemesi
+[!>] Zıt yonde hareket bugı
 [>] Yilanin büyümesi
 	[>] Kuyruk objesinin belli bir konumda spawn edilmesi
 	[ ]	Kuyruk objesinin yilani takip etmesi
