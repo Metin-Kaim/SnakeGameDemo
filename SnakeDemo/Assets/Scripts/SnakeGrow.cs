@@ -11,13 +11,23 @@ public class SnakeGrow : MonoBehaviour
 
     public List<Transform> Snake => _snake;
 
+    public Transform CurrentTail { get => _currentTail; set => _currentTail = value; }
 
     private void Start()
     {
         _snake.Add(transform); // snake_head added
     }
 
-    public Transform InstantiateTail()
+    private void OnEnable()
+    {
+        HitController.OnEat += AddTail;
+    }
+    private void OnDisable()
+    {
+        HitController.OnEat -= AddTail;
+    }
+
+    private Transform InstantiateTail()
     {
         return Instantiate(_tailPrefab);
     }
@@ -25,6 +35,8 @@ public class SnakeGrow : MonoBehaviour
     public void AddTail()//yemekten sonra cagir
     {
         _currentTail = InstantiateTail();
+        _currentTail.GetComponent<BoxCollider2D>().enabled = false;
+
         _currentTail.position = _snake[^1].position;
         _snake.Add(_currentTail);
     }

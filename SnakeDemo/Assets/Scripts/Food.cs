@@ -15,24 +15,26 @@ public class Food : MonoBehaviour
     {
         _currentFood = FoodInstantiate();
     }
-
-
-    public void FoodReposition(int sizeX = 10, int sizeY = 20)
+    private void OnEnable()
     {
-        //_currentFood.SetActive(false);
-
-        _currentFood.transform.position = RandomVectorTwo(sizeX, sizeY);
-
-        //_currentFood.SetActive(true);
-
+        HitController.OnEat += FoodReposition;
+    }
+    private void OnDisable()
+    {
+        HitController.OnEat -= FoodReposition;
     }
 
-    private GameObject FoodInstantiate(int sizeX = 10, int sizeY = 20)
+    public void FoodReposition()
     {
-        return Instantiate(_foodPrefab, RandomVectorTwo(sizeX, sizeY), Quaternion.identity);
+        _currentFood.transform.position = RandomVectorTwo();
     }
 
-    private Vector2 RandomVectorTwo(int x, int y)
+    private GameObject FoodInstantiate()
+    {
+        return Instantiate(_foodPrefab, RandomVectorTwo(), Quaternion.identity);
+    }
+
+    private Vector2 RandomVectorTwo(int x = 10, int y = 20)
     {
         int randomX, randomY;
         bool isOkey;

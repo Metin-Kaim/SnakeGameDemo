@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SnakeMovement : MonoBehaviour
 {
-    [SerializeField, Range(.1f, 2f)] float _waitToMove;
+    [SerializeField, Range(.1f, 1f)] float _waitToMove;
     [SerializeField] Transform _snakeTail;
 
     Vector2 _moveDirection;
@@ -52,6 +52,12 @@ public class SnakeMovement : MonoBehaviour
             _snakeGrow.TailsMove();
 
             transform.position += (Vector3)_moveDirection;
+
+            if (_snakeGrow.CurrentTail != null)
+            {
+                _snakeGrow.CurrentTail.GetComponent<BoxCollider2D>().enabled = true;
+                _snakeGrow.CurrentTail = null;
+            }
         }
 
     }
