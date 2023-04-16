@@ -5,5 +5,5 @@
 	[x]	Kuyruk objesinin yilani takip etmesi
 [x] Yemegin yilanin icinde spawn olmamasi
 [x] Ilk kuyruk yendiginde olusan olme bugı
-[>] Skor
+[x] Skor
 [ ] GameOver
