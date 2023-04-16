@@ -1,7 +1,8 @@
 ﻿[x] Yilanin yemek yemesi
-[!>] Zıt yonde hareket bugı
-[>] Yilanin büyümesi
-	[>] Kuyruk objesinin belli bir konumda spawn edilmesi
-	[ ]	Kuyruk objesinin yilani takip etmesi
+[x] Zıt yonde hareket bugı
+[x] Yilanin büyümesi
+	[x] Kuyruk objesinin belli bir konumda spawn edilmesi
+	[x]	Kuyruk objesinin yilani takip etmesi
+[x] Yemegin yilanin icinde spawn olmamasi
 [ ] Skor
 [ ] GameOver

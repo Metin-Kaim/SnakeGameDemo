@@ -8,6 +8,12 @@ public class SnakeMovement : MonoBehaviour
 
     Vector2 _moveDirection;
     Vector2 _tempDirection;
+    SnakeGrow _snakeGrow;
+
+    private void Awake()
+    {
+        _snakeGrow = GetComponent<SnakeGrow>();
+    }
 
     private void Start()
     {
@@ -42,6 +48,9 @@ public class SnakeMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(_waitToMove);
             _moveDirection = _tempDirection;
+
+            _snakeGrow.TailsMove();
+
             transform.position += (Vector3)_moveDirection;
         }
 

@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Food : MonoBehaviour
 {
     [SerializeField] GameObject _foodPrefab;
+    [SerializeField] SnakeGrow _snakeGrow;
 
     GameObject _currentFood;
 
@@ -31,10 +34,30 @@ public class Food : MonoBehaviour
 
     private Vector2 RandomVectorTwo(int x, int y)
     {
-        int randomX = Random.Range(0, x);
-        int randomY = Random.Range(0, y);
+        int randomX, randomY;
+        bool isOkey;
 
-        return new Vector2(randomX, randomY);
+        while (true)
+        {
+            isOkey = true;
+
+            randomX = Random.Range(0, x);
+            randomY = Random.Range(0, y);
+
+            foreach (Transform item in _snakeGrow.Snake)
+            {
+                if (Vector2.Distance(item.position, new Vector2(randomX, randomY)) < .05f)
+                {
+                    isOkey = false;
+                    break;
+                }
+            }
+            if (isOkey)
+            {
+                return new Vector2(randomX, randomY);
+            }
+        }
+
     }
     //buraya bak...
 
