@@ -29,7 +29,7 @@ public class SnakeGrow : MonoBehaviour
 
     private Transform InstantiateTail()
     {
-        return Instantiate(_tailPrefab);
+        return Instantiate(_tailPrefab,transform.parent);
     }
 
     public void AddTail()//yemekten sonra cagir

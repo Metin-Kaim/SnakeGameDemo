@@ -12,7 +12,7 @@ public class HitController : MonoBehaviour
         }
         else if (collision.CompareTag("Obstacle"))
         {
-            print("Dead");
+            GameManager.Instance.GameOver();
         }
     }
 }
